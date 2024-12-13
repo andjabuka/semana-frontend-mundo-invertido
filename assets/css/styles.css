@@ -321,14 +321,26 @@ section {
 /* Section 04 - Dungeons & Dragons Form */
 
 #section-form {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
   flex-direction: column;
   align-items: center;
   gap: 40px;
   text-align: center;
+
 }
 
-#section-form h2 {
-  width: 600px;
+#section-form .about-quiz{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-quiz h2 {
+  width: 900px;
 }
 
 #section-form .form-content h3 {
@@ -340,6 +352,7 @@ section {
 }
 
 #section-form .form-content {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -351,20 +364,136 @@ section {
   margin: 0;
 }
 
+#section-form .form-container.active {
+  border: 2px solid #CF0F0F;
+  position: absolute;
+  height: 70vh;
+  width: 500px;
+  background: transparent;
+  border-radius: 6px;
+  display: none;
+  flex-direction: column;
+  margin-left: 450px;
+  margin-top: 500px;
+  padding: 20px 30px;
+  pointer-events: auto;
+  z-index: 1;
+}
+
 #section-form .form-container {
-  flex-basis: 50%;
-  position: relative;
+  border: 2px solid #CF0F0F;
+  position: absolute;
+  height: 70vh;
+  width: 500px;
+  background: transparent;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 450px;
+  margin-top: 500px;
+  padding: 20px 30px;
+  text-align: justify;
+  z-index: 1;
+}
+
+#section-form .form-container h3 {
+  font-size: 50px;
+  color:  var(--highlight-color);
+  text-align: center;
+}
+
+#section-form .form-container ul {
+  display: inline-block;
+  font-size: 26px;
+  color:#333;
+  font-weight: 600;
+  margin: 4px 0;
 }
 
 #section-form .form-container::after {
   content: "";
-  background-color: var(--highlight-color);
+
   width: 100%;
   height: 100%;
   position: absolute;
   top: 24px;
   left: 24px;
   z-index: -1;
+}
+
+#section-form .quiz-box {
+  border: 3px solid #CF0F0F;
+  flex-basis: 50%;
+  position: absolute;
+  height: 80vh;
+  width: 600px;
+  background: transparent;
+  border-radius: 6px;
+  display: none;
+  flex-direction: column;
+  margin-left: 450px;
+  margin-top: 500px;
+  padding: 20px 30px;
+  pointer-events: none;
+  z-index: 2;
+  transform: scale(.9);
+  transition: 3s ease;
+  transition-delay: 0s;
+
+}
+
+#section-form .quiz-box.active{
+  display: flex;
+  pointer-events: auto;
+}
+
+
+#section-form .quiz-box h4 {
+    font-size: 32px;
+    text-align: center;
+    background: #CF0F0F;
+    border-radius: 6px;
+    color: var(--highlight-color);
+}
+
+#section-form .quiz-box span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#section-form .quiz-box .question-text{
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--highlight-color);
+}
+
+#section-form .quiz-box .option {
+  width: 100%;
+  padding: 12px 12px;
+  height: 6vh;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  font-size: 17px;
+  margin: 15px 0;
+  cursor: pointer;
+  transition: 0.3s;
+  color: var(--highlight-color);
+}
+
+#section-form .quiz-box .option:hover{
+  background: var(--primary-color);
+  border-color: var(--highlight-color);
+}
+
+#section-form .quiz-box .quiz-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 3px solid var(--highlight-color);
+  padding-top: 20px;
+  margin-top: 25px;
+  color: var(--highlight-color);
 }
 
 #section-form .form-container form {
@@ -377,19 +506,121 @@ section {
   text-align: left;
 }
 
-#section-form .form-container form button {
+.quiz-box .quiz-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid var(--highlight-color);
+  padding-top: 20px;
+  margin-top: 25px;
+}
+
+.quiz-box .quiz-footer .question-total {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.quiz-footer .next-btn {
+  width: 100px;
+  height: 45px;
+  outline: none;
+  border-radius: 6px;
+  font-size: 16px;
+  color: var(--highlight-color);
+  font-weight: 600;
+  cursor: pointer;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.quiz-footer .next-btn.active {
+  pointer-events: auto;
+    background: #00a63d;
+    border-color: #00a63d;
+    color: var(--highlight-color);
+}
+
+#section-form .form-container button {
   border: none;
   background-color: var(--field-background-color);
   color: var(--primary-color-contrast);
   max-width: 300px;
   align-self: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0, .3);
+  transition: .5s;
 }
 
-#section-form .form-container form button:hover {
-  background-color: var(--primary-color-contrast);
-  color: var(--field-background-color);
+#section-form .form-container button:hover {
+  background-color: #CF0F0F;
+  
 }
 
+#section-form .quiz-box .option-list {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 2px solid rgba(255,255,255, .2);
+  border-radius: 4px;
+  font-size: 17px;
+  margin: 15px 0;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#section-form .quiz-box .option-list .option.selected{
+  background: #09001d;
+  color: #00a63d;
+  border-color: #00a63d;
+}
+
+#section-form .quiz-box .option-list .option.disabled {
+  pointer-events: none;
+}
+
+
+#section-form .result-box {
+    color: var(--highlight-color);
+    border: 2px solid #CF0F0F;
+    position: absolute;
+    height: 80vh;
+    width: 600px;
+    background: transparent;
+    border-radius: 6px;
+    display: none;
+    flex-direction: column;
+    text-align: justify;
+    align-items: center;
+    margin-left: 450px;
+    margin-top: 500px;
+    padding: 20px 30px;
+    z-index: 2;
+  
+  }
+
+  #section-form .result-box.active{
+    display: flex;
+  }
+
+  .result-box h4 {
+    font-size: 38px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .result-box h4 p {
+    margin-top: 50%;
+  }
+
+  .result-box span {
+    color: #CF0F0F;
+  }
+.result-box img {
+  width: 200px; 
+  height: 200px; 
+  object-fit: cover; 
+}
 /*** FOOTER STYLES ***/
 
 footer {
@@ -427,4 +658,19 @@ footer::before {
 footer::after {
   right: -50px;
   transform: rotateZ(10deg);
+}
+
+#restart-btn {
+  background-color: #ff4757;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#restart-btn:hover {
+  background-color: #e84118;
 }

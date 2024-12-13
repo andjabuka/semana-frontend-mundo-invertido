@@ -82,35 +82,75 @@
     </section>
 
     <section id="section-form" class="container">
-      <h2>O Clube Dungeons & Dragons</h2>
-        <p>
-          Para deter Vecna, os heróis de Stranger Things também precisam de
-          você. O Clube de D&D mais famoso de Hawkings está com vagas abertas
-          para sua próxima aventura. Se você é destemido, gosta de desafios e
-          não tem medo de rodar o D20, chegou a hora de se inscrever para fazer
-          parte da nova campanha.
-        </p>
+          <div class="about-quiz">
+              <h2>Descubra Qual Personagem de Stranger Things Você Seria!</h2>
+              <p>Você já se perguntou quem você seria no mundo cheio de mistérios e aventuras de Stranger Things? Agora é a sua chance de descobrir! 🌀✨
+              <br><strong>Entre no clima:</strong> Você é corajoso(a) como Eleven, leal como Mike, engraçado(a) como Dustin ou determinado(a) como Hopper?
+              <br><br>
+              <strong>Como funciona?:</strong>
+              <br><br>
+              Responda a algumas perguntas divertidas e baseadas nas suas preferências e personalidade, e descubra qual personagem combina mais com você!
+              <br><br><strong>Por que participar?:</strong>
+              <br><li>Descubra algo novo sobre si mesmo.</li>
+              <li>Compartilhe o resultado com seus amigos e veja quem vocês formariam no mundo invertido!</li></p>
+            </div>      
 
-        <div class="form-content">
-          <h3>Entre para o clube de D&D e tenha experiências de <span>outro mundo<span></span></h3>
+          <div class="form-content">
+            <h3> Clique para começar o quiz e entre no universo de Hawkins! 
+             Quem sabe, você não é o próximo a entrar no <span>mundo invertido?<span></span></h3>
+          </div>
 
           <div class="form-container">
-            <form>
-              <label for="name">Nome Completo</label>
-              <input type="text" name="name" id="name">
+             <h3>Regras do Quiz</h3>
+             <ul>
+              <li>Responda sinceramente todas as perguntas.</li>
+              <li>Responda todas as perguntas.</li>
+              <li>Evite pensar demais nas respostas.</li>
+              <li>Não há respostas certas ou erradas.</li>
+              <li>Divirta-se durante o quiz.</li>
+            </ul>
+            <br><button class="start-btn">Start Quiz</button>
+        </div>     
+        <div class="quiz-box">
+          <h4>Stranger Quiz</h4>
+          <h5 class="question-text"></h5>
 
-              <label for="email">E-mail</label>
-              <input type="email" name="email" id="email">
-
-              <label for="level">Level</label>
-              <input type="number" name="level" id="level">
-
-              <label for="character">Personagem</label>
-              <textarea name="character" cols="30" rows="10" id="character"></textarea>
-            
-              <button type="button" id="btnSubscribe">Me inscrever</button>
-            </form>
+              <div class="option-list">
+                  <!--<div class="option">
+                    <span>"A. Corajosa e leal"</span>
+                  </div>
+                  <div class="option">
+                    <span>"B. Determinada e altruísta"</span>
+                  </div>
+                  <div class="option">
+                    <span>"C. Sensível e criativa"</span>
+                  </div>
+                  <div class="option">
+                    <span>"D. Engraçada e carismática</span>
+                  </div>*/--> 
+              </div> 
+              <br>
+            <div class="quiz-footer">
+                <span class="question-total">1 de 10 Questions</span>
+                <button class="next-btn">Next</button>
+            </div>
           </div>
+        
+          </div>
+          
+        </div>
+        <div class="result-box">
+            <h4 class="result-title">Voce seria, Dustin em <span>Stranger Things</span></h4>
+            <img class="result-image" src="" alt="Character Image"/>
+            <br><p class="result-description"">Parabens voce é Leal, engraçado e incrivelmente inteligente como o
+            Dustin que é o coração do grupo de amigos em Stranger Things. 
+            Com seu senso de humor contagiante, curiosidade científica e coragem inabalável,
+             ele enfrenta o mundo invertido com criatividade e otimismo. 
+             Sempre pronto para proteger seus amigos,
+              Dustin conquista todos com sua confiança e paixão pelas coisas que ama,
+               como Dungeons & Dragons e tecnologia.</p>
+               <br>
+               <button id="restart-btn">Reiniciar Quiz</button>
         </div>
     </section>
   </main>
@@ -142,6 +182,8 @@
         audio.volume = 0.2;
       }
     </script>
-    <script src="./assets/js/main.js" type="module"></script>
+    <script src="./assets/js/questions.js"></script>
+    <script src="./assets/js/characters.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
