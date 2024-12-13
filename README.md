@@ -1,3 +1,12 @@
+
+Esse projeto é uma recriação criativa de uma landing page temática inspirada no Mundo Invertido de Stranger Things. O objetivo inicial era atrair fãs da série com um formulário para se juntar a uma fictícia equipe de Dungeons & Dragons. No entanto, a página foi reformulada para oferecer uma experiência mais interativa e envolvente por meio de um quiz personalizado.
+
+O novo design desafia os usuários a responderem perguntas relacionadas à série, ao universo de Hawkins e suas próprias características. Com base nas respostas, o quiz determina qual personagem de Stranger Things mais combina com o perfil do participante. Essa abordagem gamificada não só aumenta o engajamento, mas também cria uma conexão emocional com os fãs, permitindo que eles explorem qual papel desempenhariam no mundo de Stranger Things.
+
+O projeto combina design atrativo, inspirado no visual sombrio e nostálgico da série, com uma experiência de usuário dinâmica, proporcionando entretenimento e um toque de personalização para os fãs. É uma celebração da cultura pop, tecnologia interativa e criatividade no desenvolvimento web.
+
+
+
 <p align="center">
     <img width="300" src="https://micheleambrosio.github.io/semana-frontend-mundo-invertido/assets/images/banner/logo.svg">
 </p>
